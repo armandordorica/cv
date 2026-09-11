@@ -1,0 +1,198 @@
+% 
+
+
+% The hyperref package is used for creating hyperlinks in the document. It's essential for your resume links.
+% \usepackage{hyperref}
+
+\documentclass[]{deedy-resume-openfont}
+
+% \documentclass[]{moderncv}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+
+\usepackage{fontspec}
+\newfontfamily{\latobold}[Path = fonts/lato/]{Lato-Bol}
+
+\newcommand{\mybold}[1]{{\latobold\bfseries #1}}
+
+\newcommand{\myitalic}[1]{{\latobold\itshape #1}}
+
+\newcommand{\myboldunderline}[1]{{\latobold\bfseries\underline{#1}}}
+
+
+\begin{document}
+
+
+ 
+\namesection{}{Armando Ordorica}{
+\href{https://www.linkedin.com/in/armando-o-28711973}{LinkedIn} | \href{https://scholar.google.com/citations?user=WGI9WWQAAAAJ&hl=en}{Google Scholar} | \href{https://cv.armandoordorica.com}{cv.armandoordorica.com} \\
+\href{mailto:armandordorica@gmail.com}{armandordorica@gmail.com} | 332 279 8477 | New York, New York \\
+}
+
+\section{Summary}
+Staff Scientist and PhD researcher specializing in large-scale recommender systems, ranking algorithms, and sequential decision-making under uncertainty. 10+ years building production ML systems at the intersection of reinforcement learning, causal inference, and recommendation systems.
+
+\sectionsep
+
+\section{SKILLS}
+\begin{minipage}[t]{.6\textwidth}
+\subsection{Programming}
+\location{Fluent in the following \mybold{languages:}}
+SQL \textbullet{} Python  \textbullet{} Shell \textbullet{} Java \textbullet{} JavaScript \textbullet{} Matlab \\
+\location{Fluent with the following \mybold{tools}:}
+AWS \textbullet{} Sci-Kit learn \textbullet{} PGMPy \textbullet{} PyTorch \textbullet{} TensorFlow \textbullet{} NumPy/SciPy \textbullet{} Causal Inference \textbullet{} Doubly Robust Estimation \textbullet{} Stochastic Optimization \textbullet{} RecSys / Ranking
+
+\sectionsep
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.35\textwidth}
+\subsection{Spoken \& Written}
+\location{\mybold{Native fluency:}} French, English, Spanish\\
+\location{\mybold{Reading fluency:}} Italian, Portuguese\\
+\end{minipage}
+
+
+
+\section{Education}
+\runsubsection{University of Toronto}
+\descript{| Ph.D. Operations Research / Computer Science}
+\location{Jan 2023 - Present | Toronto, ON}
+\begin{tightemize}
+\item \mybold{Research Topic:} Offline Reinforcement Learning in Large Scale Recommender Systems
+\item \mybold{Relevant Coursework:} Stochastic Simulations, Reinforcement Learning, Deep Learning, Natural Language Computing, Computer Vision, Markov Decision Processes, Statistical Learning, Random Processes. 
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{University of Toronto}
+\descript{| M.Eng. Electrical and Computer Engineering - Emphasis in Analytics}
+\location{Aug 2019 - Dec 2020| Toronto, ON}
+\begin{tightemize}
+\item \mybold{Master's thesis: \textit{Unsupervised Anomaly Detection on Cloud-Hosted Credit Decisioning Engines}} supervised by Dr. Yuri Lawryshyn and Dr. Deepa Kundur. This allowed to implement an anomaly detection system at scale Capital One during the migration to the cloud of their decisioning engines.  
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{McGill University}
+\descript{| B.Eng. Electrical Engineering (Minor in Software Engineering)}
+\location{May 2017
+ |  Montreal, QC}
+\sectionsep
+
+
+\section{Experience}
+
+\runsubsection{Pinterest}
+\descript{| Staff Algorithms Scientist - Personalization and Applied AI Tech Lead}
+\location{July 2022 - Present | New York, NY}
+\begin{tightemize}
+    \item Tech lead for ranking and recommender systems for HomeFeed, Search, and Related Pins. Currently architecting and implementing explore/exploit algorithms using UCB and Thompson Sampling within Contextual Bandit feedback loops to better rank novel use cases \href{https://medium.com/pinterest-engineering/pinner-progression-better-use-case-representation-driving-weekaly-active-user-growth-at-pinterest-bd2131ab238a}{[blog]}.
+    \item Pioneered \mybold{Offline Replay} at Pinterest, a \textbf{counterfactual estimation framework to simulate the effect of new ad and organic content policy parameters without live exposure}, enabling safe iteration of Contextual Bandit and RL-based policies and directly producing the first pareto experiment at the company (revenue-neutral with positive engagement, and vice versa) \hyperlink{rl-review-paper}{[paper]}.
+    \item Designed ranking signals and distribution policies for AI-generated and borderline content by modeling user churn likelihood from content-preference mismatch; signals were integrated directly into the ranking stack to suppress at-risk content, thereby improving retention \hyperlink{kdd-paper}{[paper]}.
+    \item Built a counterfactual offline evaluation framework using doubly robust estimators to score thousands of candidate behavioral labels on their causal effect on long-term user retention. Labels selected for coverage, predictive power, low variance, and orthogonality were added as \textbf{heads in a multi-head attention model and incorporated into the ranking utility function}, driving the Downstream Rewards project to +1.5M WAU across 8+ experiments \hyperlink{revisit-paper}{[paper]}.
+    \item Created and deployed the Merchant Quality Signal, a \textbf{multi-head neural network} to predict user perception of merchant trustworthiness, fully rolled out to \textasciitilde500M MAU.
+\end{tightemize}
+
+\sectionsep
+
+
+\sectionsep
+
+\runsubsection{{Jumio}}
+\descript{| Sr. Machine Learning Engineer - Risk Scoring Lead}
+\location{May 2021 - July 2022 | Palo Alto, CA (Remote)}
+\begin{tightemize}
+\item Led a team to develop and deploy an Aggregated Fraud Score model based on contextual data (browser settings, device risk, network attributes, etc), enhancing identity fraud detection for +10k clients across +40 countries, including large Banks, Crypto Platforms, and Big Tech (i.e. Airbnb, Uber, Stripe, among others).
+\item Integrated Random Forests, GBMs, CNNs, Clustering Algorithms, and NLP models into a unified scoring system to enhance decision-making accuracy.
+\item Achieved a \textasciitilde40\% reduction in costs related to human labeling.
+\end{tightemize}
+\sectionsep
+
+
+
+\runsubsection{University of Toronto}
+\descript{| Adjunct Professor}
+\location{May 2021 - Jan 2023 | Toronto, ON}
+
+\begin{tightemize}
+\item Taught a \href{https://bootcamp.learn.utoronto.ca/fintech/}{\underline{\textbf{course}}} to $\sim$ 150 students at the University of Toronto that includes topics such as Financial Fundamentals, Blockchain and Cryptocurrencies, Machine Learning Applications in Finance, Deep Learning,  Database Management, and Cloud Computing (AWS).
+
+\end{tightemize}
+
+
+\sectionsep
+
+\runsubsection{Flexiti Financial}
+\descript{| Risk Algorithms and Fraud - ML Manager}
+\location{Dec 2020 - May 2021 | Toronto, ON}
+\begin{tightemize}
+\item Enhanced credit card application fraud detection by implementing Random Forests and Gradient Boosting models, achieving a greater than 400\% improvement in F1-score over the previous rule-based decisioning algorithm.
+\item Revamped the anomaly detection monitoring ecosystem using techniques such as Gaussian Mixture Models and Random Forests, yielding an ecosystem that dynamically adapts to detect fraud threats.
+\item Developed an Email Clustering Tool to identify fraud using advanced Natural Language Processing (NLP) techniques, including Levenshtein's distance and K-Nearest Neighbors. This uncovered a number of fraudsters that were under way using email tumbling as a technique.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{Capital One}
+\descript{| Sr. Data Scientist}
+\location{Aug 2017 - Dec 2020 | Toronto, ON}
+\begin{tightemize}
+
+\item \mybold{High Risk Authorizations Lead (Sep 2019 - Dec 2020)}: Led the redesign and end-to-end implementation of the credit strategy for high-risk authorizations, from modeling to deployment, increasing the approval rate by almost 30\% and generating \$7M annually in NIBT.
+
+\item \mybold{Credit Risk Policy Design and Implementation (Sep 2018 - Sep 2019):}
+    \vspace{1mm} % Add vertical space between the title and the nested list
+
+    \begin{tightemize}
+
+    \item Designed Credit Line Management Policies valued at \$37B using Monte-Carlo sampling methods to determine lending amounts for different population segments based on risk profiles.
+    \item Leveraged Hidden Markov Models and Bayesian Inference to forecast shifts in consumer behavior due to Quebec's new legislative framework (Bill 134), leading a Credit Decision with \$1B risk exposure and \$200M in outstandings.
+    \end{tightemize}
+
+\item \mybold{Fraud Modelling (Aug 2017 - March 2019):}
+    \vspace{1mm} % Add vertical space between the title and the nested list
+
+    \begin{tightemize}
+    \item Detected gaps and flaws in the decisioning algorithm using Gaussian Mixture Models, uncovering \$20M/month in potential recovery for forced authorizations in the USA and Canada.
+    \item Revamped the chargeback process, mitigating merchant fraud and enhancing the overall fraud detection system.
+    \end{tightemize}
+
+\end{tightemize}
+
+\sectionsep
+
+
+\runsubsection{Montreal Neurological Institute}
+\descript{| Data Scientist - Cerebral Cortex Research}
+\location{Aug 2016 - May 2017 | Montreal, QC}
+\begin{tightemize}
+\item Developed a software framework in Python to simulate electrical brain activity based on histological data with the goal of better understanding how different sublayers of the cerebral cortex are connected.   This is particularly relevant in the understanding of neurodegenerative diseases such as epilepsy and Alzheimer's disease.
+
+\end{tightemize}
+\sectionsep
+
+
+\section{Publications}
+\begin{itemize}\itemsep0em
+\item \hypertarget{recsys-paper}{}\href{https://arxiv.org/abs/2607.14192}{Long-term User Engagement Optimization through Model-agnostic Downstream Rewards Learning.} Dhruvil Badani, David Woo, Matthew Chun, Kelly He, Armando Ordorica, et al. ACM Conference on Recommender Systems (ACM RecSys), 2026.
+\item \hypertarget{revisit-paper}{}\href{https://ojs.aaai.org/index.php/AAAI/article/view/41434}{Save, Revisit, Retain: A Scalable Framework for Enhancing User Retention in Large-Scale Recommender Systems.} Weijie Jiang, Armando Ordorica, Jaewon Yang, Olafur Gudmundsson, Yucheng Tu, Huizhong Dong. Innovative Applications of Artificial Intelligence (IAAI-26), AAAI, 2026.
+\item \hypertarget{kdd-paper}{}\href{https://cv.armandoordorica.com/papers/detection-near-policy-violating-content.pdf}{Detection and Measurement of Near-Policy-Violating Content in Online Platforms.} Armando Ordorica, Anna Kiyantseva, Karim Wahba, Yucheng Tu, Adam Avery. 4th Workshop on End-to-End Customer Journey Optimization (KDD 2025 Workshop), 2025.
+\item \hypertarget{rl-review-paper}{}\href{https://cv.armandoordorica.com/papers/rl-ad-policy-optimization-review.pdf}{A Review of Reinforcement Learning Applications in Ad Policy Optimization for Large-Scale Recommender Systems.} Armando Ordorica, Yuri Lawryshyn. Accepted to ACM Transactions on Recommender Systems, Sep 2026.
+\end{itemize}
+
+\section{Patents}
+\begin{itemize}\itemsep0em
+\item \href{https://patents.google.com/patent/US20250139683A1/en}{Recommending Content Items Based on a Long-Term Objective} - U.S. App. No. 18/678,748
+\item \href{https://patents.google.com/patent/US20250139353A1/en}{Identifying Image Based Content Items using a Large Language Model} - U.S. App. No. 18/499,984
+\item \href{https://patents.google.com/patent/US20230206372A1/en}{Fraud Detection Using Aggregate Fraud Score for Confidence of Liveness/Similarity Decisions} - U.S. App. No. 17/564,377
+\item \href{https://scholar.google.com/citations?view_op=view_citation&user=WGI9WWQAAAAJ&citation_for_view=WGI9WWQAAAAJ:d1gkVwhDpl0C}{System and Method for Optimizing Authentication Workflows, Risk Scoring, and Decision Points} - U.S. Patent App. No. 17/941,343
+\end{itemize}
+
+
+\end{document}  \documentclass[]{article}
