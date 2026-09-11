@@ -15,7 +15,7 @@ cp "$CV_DIR/main.pdf" "$SITE_DIR/public/cv.pdf"
 
 echo "▶ Pushing CV repo..."
 cd "$CV_DIR"
-git add main.tex main.pdf
+git add main.tex main.pdf deedy-resume-openfont.cls fonts/ .gitignore
 git diff --cached --quiet && echo "  (no CV changes)" || git commit -m "Update CV" && git push origin main
 
 echo "▶ Pushing website repo..."
