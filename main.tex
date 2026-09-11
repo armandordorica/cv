@@ -20,6 +20,13 @@
 
 \newcommand{\myboldunderline}[1]{{\latobold\bfseries\underline{#1}}}
 
+% Make all hyperlinks bold (in addition to blue) so they stand out clearly.
+% \textbf alone won't work here since the main font (Lato-Lig) has no true
+% bold shape registered; \latobold loads the actual Lato-Bol font file.
+\let\OldHref\href
+\renewcommand{\href}[2]{\OldHref{#1}{\latobold #2}}
+\let\OldHyperlink\hyperlink
+\renewcommand{\hyperlink}[2]{\OldHyperlink{#1}{\latobold #2}}
 
 \begin{document}
 
