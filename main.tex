@@ -11,12 +11,16 @@
 \usepackage{xcolor}
 \definecolor{linkblue}{RGB}{17, 85, 204}
 
-\hypersetup{
+% Apply after the class finishes loading hyperref (wins over any class defaults)
+\AtBeginDocument{
+  \hypersetup{
     colorlinks=true,
+    hidelinks=false,
     linkcolor=linkblue,
     urlcolor=linkblue,
     citecolor=linkblue,
     filecolor=linkblue,
+  }
 }
 
 
